@@ -23,11 +23,13 @@ public class Main {
             System.out.print("Enter (A, B, C): ");
             String answer = keyboard.next().toUpperCase();
             guesses.add(answer);
-            if(answer == answers[i]) {
+            if(answer.equals(answers[i])) {
+                score++;
                 System.out.println("Correct");
             } else {
-                System.out.println("Incorrect the answer is " + answers[i]);
+                System.out.println("Incorrect, the answer is " + answers[i]);
             }
         }
+        System.out.println("Your score is " + score);
     }
 }
